@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chimp Me Baby One More Time</title>
+</head>
+<body>
+
+<h1>Ch-ch-ch-chimp me</h1>
+<div class='chimp-box'>
+    <button><span class="monkey-active">🙉</span><span class="monkey">🐵</span> Chimp Me <span class="monkey">🐵</span><span class="monkey-active">🙉</span></button>    
+    <img class="chimp">
+</div>
+</body>
+
+<script>
+let chimpPic = document.querySelector('.chimp');
+let chimpButton = document.querySelector('button');
+
+let chimpArray = ['https://screenshot.click/failchimp.png', 
+'https://screenshot.click/galechimp.jpeg', 
+'https://screenshot.click/jailchimp.jpeg', 
+'https://screenshot.click/mailchamp.jpeg',
+'https://screenshot.click/shalechimp.jpeg',
+'https://screenshot.click/snailchimp.jpeg',
+'https://screenshot.click/veilchimp.jpeg',
+'https://screenshot.click/alechimp.jpeg',
+'https://screenshot.click/monorailchimp.jpeg',
+'https://screenshot.click/quailchimp.jpeg',
+'https://screenshot.click/tallchimp.jpeg',
+'https://screenshot.click/balechimp.jpeg',
+'https://screenshot.click/yalechimp.jpeg',
+'https://screenshot.click/molechimp.jpeg',
+'https://screenshot.click/finalchimp.jpeg',
+'https://screenshot.click/scalechimp.jpeg',
+'https://screenshot.click/sailchimp.jpeg',
+'https://screenshot.click/trailchimp.jpeg',
+'https://screenshot.click/flailchimp.jpeg',
+'https://screenshot.click/chemtrailchimp.jpeg',
+'https://screenshot.click/nailchimp.jpeg',
+]
+
+const generateChimp = () => {
+    let chimpNumber = Math.floor(Math.random() * (chimpArray.length));
+    console.log(chimpNumber);
+    chimpPic.setAttribute('src', chimpArray[chimpNumber]);
+}
+
+chimpButton.addEventListener('click', generateChimp);
+
+</script>
+
+<style>
+.chimp {
+    display: block;
+    max-height: 500px;
+}
+
+html {
+    height:100%;
+    background-color: rgb(112,104,93);
+    background-image: url('https://screenshot.click/wp4122323-removebg-preview.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+button {
+    margin-bottom: 2em;
+    padding: 5px 10px;
+    font-weight:bold;
+    text-transform: uppercase;
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+button:active {
+    transform:translateY(2px);
+}
+
+button .monkey-active {
+display:none;
+}
+
+button:active .monkey-active {
+    display: inline;
+}
+
+button:active .monkey {
+    display: none;
+}
+</style>
+
+</html>
