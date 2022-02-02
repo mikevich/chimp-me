@@ -48,6 +48,18 @@ const generateChimp = () => {
 
 chimpButton.addEventListener('click', generateChimp);
 
+var keySequence = []; 
+window.addEventListener('keyup', (e) => {
+    keySequence.push(e.key)
+    if (keySequence.length == 5) {
+        keySequence.shift();
+    }
+
+    if (keySequence.join('') == "sail") {
+        chimpPic.setAttribute('src', 'https://screenshot.click/sailchimp.jpeg');
+    }
+});  
+  
 </script>
 
 <style>
